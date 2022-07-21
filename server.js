@@ -29,6 +29,10 @@ app.listen(PORT, () => {
     console.log('nomming at port', PORT);
 })
 
+//bakers
+const bakersController = require('./controllers/bakers_controllers.js')
+app.use('/bakers', bakersController)
+
 // 404 Page
 app.get('*', (req, res) => {
     res.send('404')
